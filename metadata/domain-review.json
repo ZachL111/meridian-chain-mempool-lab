@@ -1,0 +1,73 @@
+{
+  "repo": "meridian-chain-mempool-lab",
+  "language": "C",
+  "category": "Blockchain tooling",
+  "goal": "Implement a C blockchain tooling project for mempool storage recovery, using log and snapshot fixtures and replay consistency checks.",
+  "review_model": {
+    "terms": [
+      "event finality",
+      "nonce pressure",
+      "settlement risk",
+      "proof depth"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "event finality",
+      "signal": 72,
+      "slack": 45,
+      "drag": 27,
+      "confidence": 80,
+      "score": 188,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "nonce pressure",
+      "signal": 47,
+      "slack": 32,
+      "drag": 28,
+      "confidence": 53,
+      "score": 95,
+      "lane": "hold"
+    },
+    {
+      "name": "edge",
+      "focus": "settlement risk",
+      "signal": 77,
+      "slack": 27,
+      "drag": 22,
+      "confidence": 59,
+      "score": 174,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "proof depth",
+      "signal": 78,
+      "slack": 22,
+      "drag": 25,
+      "confidence": 86,
+      "score": 189,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "event finality",
+      "signal": 55,
+      "slack": 26,
+      "drag": 28,
+      "confidence": 80,
+      "score": 132,
+      "lane": "watch"
+    }
+  ]
+}
