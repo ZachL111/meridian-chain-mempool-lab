@@ -1,0 +1,7 @@
+name,demand,capacity,latency,risk,weight,score,decision,reason
+baseline,58,89,16,10,9,151,review,blockchain tooling baseline scenario exercises the review path for bounded failure handling
+pressure,81,68,24,21,10,118,review,blockchain tooling pressure scenario exercises the review path for bounded failure handling
+surge,99,92,18,16,14,218,accept,blockchain tooling surge scenario keeps the local fixture within the modeled acceptance band
+degraded,63,57,34,25,7,29,review,blockchain tooling degraded scenario exercises the review path for bounded failure handling
+recovery,93,102,21,9,10,230,accept,blockchain tooling recovery scenario keeps the local fixture within the modeled acceptance band
+boundary,77,85,23,16,7,143,review,blockchain tooling boundary scenario exercises the review path for bounded failure handling
